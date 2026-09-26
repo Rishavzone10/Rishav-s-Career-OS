@@ -25,6 +25,7 @@
       <a href="#architecture">Architecture</a>
       <a href="#profile-core">Profile Core</a>
       <a href="#demo">Live Demo</a>
+      <a href="#engines">Engines</a>
       <a href="#flow">Job Flow</a>
       <a href="#engineering">Engineering</a>
     </nav>
@@ -149,6 +150,8 @@
             <button class="projection" data-view="full_stack"><span class="projection-icon">F</span><span><strong>Full Stack</strong><small>Next.js · Node · product engineering</small></span><span>→</span></button>
             <button class="projection" data-view="ai_agentic"><span class="projection-icon">A</span><span><strong>AI / Agentic</strong><small>MCP · LLM workflows · automation</small></span><span>→</span></button>
             <button class="projection" data-view="ml"><span class="projection-icon">M</span><span><strong>ML</strong><small>Forecasting · Python · SHAP</small></span><span>→</span></button>
+            <button class="projection" data-view="resume"><span class="projection-icon">R</span><span><strong>Resume</strong><small>ATS-tailored structured projection</small></span><span>→</span></button>
+            <button class="projection" data-view="public"><span class="projection-icon">P</span><span><strong>Public</strong><small>Sanitized high-level overview</small></span><span>→</span></button>
           </div>
           <div class="projection-output" id="projectionOutput">
             <div class="output-label">Current projection</div>
@@ -234,9 +237,83 @@
       </div>
     </section>
 
-    <section id="flow" class="section content-section dark-section">
+    <section id="engines" class="section content-section dark-section engines-section">
       <div class="section-heading reveal">
-        <div class="eyebrow">04 · End-to-end job story</div>
+        <div class="eyebrow">04 · Career OS Engines</div>
+        <h2>Four specialized subsystems powered by the Profile Core.</h2>
+        <p>Each engine is an autonomous consumer operating at the edges of the system, consulting the Profile Core for facts and requiring human confirmation for high-stakes actions.</p>
+      </div>
+
+      <div class="engines-grid reveal delay-1">
+        <div class="engine-card">
+          <div class="engine-header">
+            <span class="engine-badge">Engine A</span>
+            <span class="mono" style="font-size: 0.75rem; color: var(--amber-bright);">Networking Graph</span>
+          </div>
+          <h3>Networking & Graph Engine</h3>
+          <p>Builds multi-degree affinity paths to target companies. Search results are cached locally to reduce API costs, quality gates verify profile relevance, and outreach remains human-reviewable.</p>
+          <div class="engine-pipeline">
+            <div class="pipeline-step"><span class="dot"></span><span>Target company & discovery</span></div>
+            <div class="pipeline-step"><span class="dot"></span><span>Search provider chain (cached)</span></div>
+            <div class="pipeline-step"><span class="dot"></span><span>Quality gate & affinity scoring</span></div>
+            <div class="pipeline-step"><span class="dot"></span><span>AI outreach note tied to profile facts</span></div>
+            <div class="pipeline-step"><span class="dot"></span><strong style="color: var(--amber-bright);">Human review & relationship state</strong></div>
+          </div>
+        </div>
+
+        <div class="engine-card">
+          <div class="engine-header">
+            <span class="engine-badge">Engine B</span>
+            <span class="mono" style="font-size: 0.75rem; color: var(--emerald-bright);">Job Intelligence</span>
+          </div>
+          <h3>Job Intelligence & ATS Verifier</h3>
+          <p>Ingests multi-source job postings, canonicalizes descriptions, deduplicates via fingerprinting, and verifies live ATS/careers evidence before computing deterministic profile fit.</p>
+          <div class="engine-pipeline">
+            <div class="pipeline-step"><span class="dot"></span><span>Job source canonicalization</span></div>
+            <div class="pipeline-step"><span class="dot"></span><span>Fingerprint & deduplicate</span></div>
+            <div class="pipeline-step"><span class="dot"></span><span>Verify careers / ATS evidence</span></div>
+            <div class="pipeline-step"><span class="dot"></span><span>Evaluate job validity vs profile fit</span></div>
+            <div class="pipeline-step"><span class="dot"></span><strong style="color: var(--emerald-bright);">Ranked actionable opportunity</strong></div>
+          </div>
+        </div>
+
+        <div class="engine-card">
+          <div class="engine-header">
+            <span class="engine-badge">Engine C</span>
+            <span class="mono" style="font-size: 0.75rem; color: var(--cyan-bright);">Lifecycle Memory</span>
+          </div>
+          <h3>Lifecycle & Context Engine</h3>
+          <p>Links incoming signals (application confirmations, interview invites) back to the exact profile revision and tailored view submitted. When an interview occurs, the narrative remains 100% consistent.</p>
+          <div class="engine-pipeline">
+            <div class="pipeline-step"><span class="dot"></span><span>Incoming application signal</span></div>
+            <div class="pipeline-step"><span class="dot"></span><span>Classify & match to application</span></div>
+            <div class="pipeline-step"><span class="dot"></span><span>Retrieve exact context (Rev 42, View, Resume ID)</span></div>
+            <div class="pipeline-step"><span class="dot"></span><span>Interview preparation synthesis</span></div>
+            <div class="pipeline-step"><span class="dot"></span><strong style="color: var(--cyan-bright);">Zero narrative drift</strong></div>
+          </div>
+        </div>
+
+        <div class="engine-card">
+          <div class="engine-header">
+            <span class="engine-badge">Engine D</span>
+            <span class="mono" style="font-size: 0.75rem; color: var(--violet-bright);">Lab / Proof of Work</span>
+          </div>
+          <h3>Lab & Proof of Work Generator</h3>
+          <p>For high-value opportunities, analyzes company tech stacks, hypothesizes architectural challenges, and drafts targeted proof-of-work prototypes and code artifacts for outreach.</p>
+          <div class="engine-pipeline">
+            <div class="pipeline-step"><span class="dot"></span><span>High-value company research</span></div>
+            <div class="pipeline-step"><span class="dot"></span><span>Challenge & bottleneck hypothesis</span></div>
+            <div class="pipeline-step"><span class="dot"></span><span>Proof-of-work idea generation</span></div>
+            <div class="pipeline-step"><span class="dot"></span><span>Selected code artifact synthesis</span></div>
+            <div class="pipeline-step"><span class="dot"></span><strong style="color: var(--violet-bright);">Network outreach with proof</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="flow" class="section content-section">
+      <div class="section-heading reveal">
+        <div class="eyebrow">05 · End-to-end job story</div>
         <h2>From “job found” to “ready for the interview”.</h2>
         <p>The system turns a fragmented job search into one traceable flow — with the profile core sitting underneath every decision.</p>
       </div>
@@ -265,7 +342,7 @@
 
     <section id="engineering" class="section content-section">
       <div class="section-heading reveal">
-        <div class="eyebrow">05 · Recruiter view</div>
+        <div class="eyebrow">06 · Engineering principles</div>
         <h2>What I wanted to demonstrate as an engineer.</h2>
       </div>
       <div class="engineering-grid reveal delay-1">
@@ -279,7 +356,7 @@
     <section class="section content-section compact-section">
       <div class="two-col reveal">
         <div>
-          <div class="eyebrow">06 · Architecture that evolves</div>
+          <div class="eyebrow">07 · Architecture evolution</div>
           <h2>The website is designed to grow with the system.</h2>
           <p>New engines, consumers, profile views and event flows can be added without changing the public narrative: the Profile Core remains the center, while the architecture map simply gains another branch.</p>
         </div>
