@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b0c0f" />
+  <meta name="description" content="Rishav's Career OS — an interactive engineering case study for a profile-centered AI career system." />
+  <title>Rishav's Career OS</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230b0c0f'/%3E%3Cpath d='M18 20h28M18 32h28M18 44h18' stroke='%2367e8f9' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+
+  <header class="site-header">
+    <a href="#top" class="brand" aria-label="Rishav's Career OS home">
+      <span class="brand-mark"><span></span><span></span><span></span></span>
+      <span>Rishav's Career OS</span>
+    </a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#architecture">Architecture</a>
+      <a href="#profile-core">Profile Core</a>
+      <a href="#demo">Live Demo</a>
+      <a href="#flow">Job Flow</a>
+      <a href="#engineering">Engineering</a>
+    </nav>
+    <a class="header-cta" href="#demo">Explore system <span>↗</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="status-dot"></span> Personal career infrastructure</div>
+        <h1>I built a <span>Career OS</span> that treats my professional profile like an API.</h1>
+        <p class="hero-lede">One canonical profile. AI-facing MCP. Deterministic REST APIs. Role-specific views. Job intelligence. Networking. Resume context. Interview lifecycle.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#demo">Run the demo <span>→</span></a>
+          <a class="button button-ghost" href="#architecture">View architecture</a>
+        </div>
+        <div class="hero-note"><span class="lock-icon">⌁</span> Public-safe demo environment · synthetic records · no private credentials</div>
+      </div>
+
+      <div class="hero-visual reveal delay-1" aria-label="Animated Career OS architecture preview">
+        <div class="hero-grid"></div>
+        <div class="hero-orbit orbit-1"></div>
+        <div class="hero-orbit orbit-2"></div>
+        <div class="hero-core">
+          <div class="core-ring"></div>
+          <div class="core-icon">CORE</div>
+          <div class="core-label">PROFILE<br />SOURCE OF TRUTH</div>
+        </div>
+        <div class="orbit-node node-ai">AI / MCP</div>
+        <div class="orbit-node node-rest">REST API</div>
+        <div class="orbit-node node-jobs">JOB ENGINE</div>
+        <div class="orbit-node node-network">NETWORK</div>
+        <div class="orbit-node node-life">LIFECYCLE</div>
+        <svg class="hero-lines" viewBox="0 0 720 500" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M360 250 C360 120 180 130 126 102" />
+          <path d="M360 250 C520 125 592 180 610 113" />
+          <path d="M360 250 C540 250 595 275 640 275" />
+          <path d="M360 250 C530 375 560 404 590 423" />
+          <path d="M360 250 C220 390 145 415 120 402" />
+        </svg>
+        <div class="signal signal-a"></div><div class="signal signal-b"></div><div class="signal signal-c"></div>
+      </div>
+    </section>
+
+    <section class="proof-strip section-sm">
+      <div class="proof-cell"><span class="proof-label">Core</span><strong>Canonical career state</strong></div>
+      <div class="proof-cell"><span class="proof-label">Interface</span><strong>MCP + REST</strong></div>
+      <div class="proof-cell"><span class="proof-label">Intelligence</span><strong>AI-assisted workflows</strong></div>
+      <div class="proof-cell"><span class="proof-label">Control</span><strong>Versioned + auditable</strong></div>
+      <div class="proof-cell"><span class="proof-label">Cost model</span><strong>Free-first architecture</strong></div>
+    </section>
+
+    <section id="architecture" class="section content-section">
+      <div class="section-heading reveal">
+        <div class="eyebrow">01 · System architecture</div>
+        <h2>Not a portfolio. A small operating system for a career.</h2>
+        <p>Everything starts from one canonical professional state. Consumers don't maintain competing copies; they ask the core for the current projection they need.</p>
+      </div>
+
+      <div class="architecture-shell reveal delay-1">
+        <div class="architecture-canvas" id="architectureCanvas">
+          <div class="arch-column left-column">
+            <button class="arch-node" data-node="ai" aria-label="AI clients"><span class="node-kicker">Interface</span><strong>GPT · Gemini · Claude</strong><small>MCP client</small></button>
+          </div>
+          <div class="arch-column center-column">
+            <button class="arch-node active" data-node="profile"><span class="node-kicker">Core</span><strong>Career Profile Core</strong><small>Canonical state + revisions</small></button>
+            <div class="arch-stack">
+              <button class="mini-node" data-node="revision">Revision history</button>
+              <button class="mini-node" data-node="validation">Validation + guardrails</button>
+              <button class="mini-node" data-node="views">Profile views</button>
+              <button class="mini-node" data-node="evidence">Evidence / provenance</button>
+            </div>
+          </div>
+          <div class="arch-column right-column">
+            <button class="arch-node" data-node="engines"><span class="node-kicker">Consumers</span><strong>Career engines</strong><small>Jobs · Network · Lifecycle</small></button>
+          </div>
+          <div class="arch-bottom">
+            <button class="flow-pill" data-node="rest">REST / internal API</button>
+            <button class="flow-pill" data-node="profile">Current revision</button>
+            <button class="flow-pill" data-node="mcp">MCP tools</button>
+          </div>
+          <div class="connector-line line-ai"></div>
+          <div class="connector-line line-rest"></div>
+          <div class="connector-line line-engines"></div>
+          <div class="connector-line line-mcp"></div>
+        </div>
+        <aside class="architecture-detail" id="architectureDetail">
+          <div class="detail-kicker">Selected layer</div>
+          <h3 id="detailTitle">Career Profile Core</h3>
+          <p id="detailBody">The canonical machine-readable source of professional truth. Every downstream consumer asks for a current view instead of carrying its own authoritative copy.</p>
+          <div class="detail-tags" id="detailTags"><span>FastAPI</span><span>PostgreSQL</span><span>Pydantic</span><span>SQLAlchemy</span></div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="profile-core" class="section content-section dark-section">
+      <div class="section-heading reveal">
+        <div class="eyebrow">02 · The core idea</div>
+        <h2>Update once. Every consumer sees the latest valid profile.</h2>
+        <p>The public demo simulates the same contract the system exposes privately: current state, purpose-built views, change proposals, revision commits, and historical diffs.</p>
+      </div>
+
+      <div class="profile-demo-grid reveal delay-1">
+        <div class="profile-card large-card">
+          <div class="card-topline"><span>Canonical profile</span><span class="mono">REV_042</span></div>
+          <div class="profile-identity"><div class="avatar">RS</div><div><strong>Rishav Srivastav</strong><span>Software Engineer · Backend · AI Systems</span></div></div>
+          <div class="profile-block">
+            <span class="block-label">Core positioning</span>
+            <div class="token-row"><span>Java / Spring Boot</span><span>Node.js</span><span>React / Next.js</span><span>AI / MCP</span></div>
+          </div>
+          <div class="profile-block">
+            <span class="block-label">Projects</span>
+            <div class="profile-list"><div><span class="list-dot"></span>Career OS</div><div><span class="list-dot"></span>QMS Platform</div><div><span class="list-dot"></span>AI / ML projects</div></div>
+          </div>
+          <div class="revision-bar"><span>latest revision</span><strong>42</strong><span class="revision-live">● live</span></div>
+        </div>
+
+        <div class="projection-card">
+          <div class="card-topline"><span>Profile projections</span><span class="mono">GET /views/*</span></div>
+          <div class="projection-list">
+            <button class="projection active" data-view="backend"><span class="projection-icon">B</span><span><strong>Backend</strong><small>Java · Spring · distributed systems</small></span><span>→</span></button>
+            <button class="projection" data-view="full_stack"><span class="projection-icon">F</span><span><strong>Full Stack</strong><small>Next.js · Node · product engineering</small></span><span>→</span></button>
+            <button class="projection" data-view="ai_agentic"><span class="projection-icon">A</span><span><strong>AI / Agentic</strong><small>MCP · LLM workflows · automation</small></span><span>→</span></button>
+            <button class="projection" data-view="ml"><span class="projection-icon">M</span><span><strong>ML</strong><small>Forecasting · Python · SHAP</small></span><span>→</span></button>
+          </div>
+          <div class="projection-output" id="projectionOutput">
+            <div class="output-label">Current projection</div>
+            <div class="output-title">Backend Engineer</div>
+            <div class="output-copy">Java, Spring Boot, microservices, distributed systems — derived from the same canonical profile.</div>
+            <div class="output-code">revision = 42<br>view = "backend"<br>source = "canonical_profile"</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="demo" class="section content-section">
+      <div class="section-heading reveal">
+        <div class="eyebrow">03 · Interactive demo</div>
+        <h2>See the interfaces behave.</h2>
+        <p>No private data is required. This is a deterministic, sanitized simulation of how an AI client talks to the Career Profile Core and how the career engines consume the result.</p>
+      </div>
+
+      <div class="demo-shell reveal delay-1">
+        <div class="demo-tabs" role="tablist">
+          <button class="demo-tab active" data-demo="mcp">MCP call</button>
+          <button class="demo-tab" data-demo="rest">REST call</button>
+          <button class="demo-tab" data-demo="diff">Profile diff</button>
+          <button class="demo-tab" data-demo="job">Job pipeline</button>
+        </div>
+
+        <div class="demo-panel" data-panel="mcp">
+          <div class="console-grid">
+            <div class="console-side">
+              <span class="console-label">AI request</span>
+              <div class="chat-bubble">Get the latest backend profile for this candidate.</div>
+              <button class="run-button" id="runMcp">Run MCP call <span>▶</span></button>
+              <div class="tool-list"><span>get_profile</span><span>get_profile_view</span><span>get_revision_diff</span><span>validate_profile</span></div>
+            </div>
+            <div class="terminal" id="mcpTerminal">
+              <div class="terminal-bar"><span>career-profile-core</span><span class="terminal-status">READY</span></div>
+              <pre><code><span class="muted">$</span> waiting for request…</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="demo-panel hidden" data-panel="rest">
+          <div class="api-grid">
+            <div class="endpoint-list">
+              <button class="endpoint active" data-endpoint="profile"><span class="method get">GET</span><span>/v1/profile</span><small>canonical profile</small></button>
+              <button class="endpoint" data-endpoint="view"><span class="method get">GET</span><span>/v1/views/backend</span><small>role-specific projection</small></button>
+              <button class="endpoint" data-endpoint="changes"><span class="method get">GET</span><span>/v1/revisions/changes</span><small>incremental sync</small></button>
+              <button class="endpoint" data-endpoint="proposal"><span class="method post">POST</span><span>/v1/proposals</span><small>stage a change</small></button>
+            </div>
+            <div class="api-response" id="apiResponse">
+              <div class="response-head"><span>200 OK</span><span>application/json</span></div>
+              <pre><code>{
+  <span class="key">"view"</span>: <span class="str">"canonical"</span>,
+  <span class="key">"revision"</span>: <span class="num">42</span>,
+  <span class="key">"status"</span>: <span class="str">"valid"</span>
+}</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="demo-panel hidden" data-panel="diff">
+          <div class="diff-grid">
+            <div class="diff-card old"><div class="diff-label">Revision 41</div><pre>- "Java / Spring Boot"<br>- 6 projects<br>- 24 verified skills</pre></div>
+            <div class="diff-arrow">→</div>
+            <div class="diff-card new"><div class="diff-label">Revision 42</div><pre><span class="plus">+ "Java / Spring Boot / MCP"</span><br><span class="plus">+ Career OS flagship project</span><br><span class="plus">+ 25 verified skills</span></pre></div>
+          </div>
+          <button class="run-button centered" id="runDiff">Simulate AI change proposal <span>✦</span></button>
+          <div class="proposal-state" id="proposalState">Waiting for a proposal…</div>
+        </div>
+
+        <div class="demo-panel hidden" data-panel="job">
+          <div class="job-demo">
+            <div class="job-input"><span class="console-label">Demo job</span><div class="job-title">Backend Engineer · Distributed Systems</div><div class="job-meta">synthetic opportunity · India · hybrid</div><button class="run-button" id="runJob">Run through Career OS <span>→</span></button></div>
+            <div class="job-trace" id="jobTrace">
+              <div class="trace-step" data-step="1"><span class="trace-index">01</span><span><strong>Profile view</strong><small>Load backend projection</small></span></div>
+              <div class="trace-step" data-step="2"><span class="trace-index">02</span><span><strong>Job intelligence</strong><small>Verify + score role fit</small></span></div>
+              <div class="trace-step" data-step="3"><span class="trace-index">03</span><span><strong>Network context</strong><small>Check relationship graph</small></span></div>
+              <div class="trace-step" data-step="4"><span class="trace-index">04</span><span><strong>Resume view</strong><small>Render role-specific narrative</small></span></div>
+              <div class="trace-step" data-step="5"><span class="trace-index">05</span><span><strong>Lifecycle</strong><small>Prepare downstream context</small></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="flow" class="section content-section dark-section">
+      <div class="section-heading reveal">
+        <div class="eyebrow">04 · End-to-end job story</div>
+        <h2>From “job found” to “ready for the interview”.</h2>
+        <p>The system turns a fragmented job search into one traceable flow — with the profile core sitting underneath every decision.</p>
+      </div>
+
+      <div class="flow-rail reveal delay-1">
+        <div class="flow-node active"><span>01</span><strong>Discover</strong><small>Find opportunity</small></div>
+        <div class="rail-line"></div>
+        <div class="flow-node"><span>02</span><strong>Verify</strong><small>Confirm real role</small></div>
+        <div class="rail-line"></div>
+        <div class="flow-node"><span>03</span><strong>Understand</strong><small>Company + problem</small></div>
+        <div class="rail-line"></div>
+        <div class="flow-node"><span>04</span><strong>Connect</strong><small>Network context</small></div>
+        <div class="rail-line"></div>
+        <div class="flow-node"><span>05</span><strong>Tailor</strong><small>Role-specific profile</small></div>
+        <div class="rail-line"></div>
+        <div class="flow-node"><span>06</span><strong>Apply</strong><small>Human approval</small></div>
+        <div class="rail-line"></div>
+        <div class="flow-node"><span>07</span><strong>Prepare</strong><small>Interview context</small></div>
+      </div>
+
+      <div class="story-card reveal delay-2">
+        <div class="story-main"><span class="story-label">The interesting part</span><h3>The system remembers <em>which version of me</em> was used.</h3><p>A submitted artifact can stay tied to the profile revision and role-specific view that created it. That keeps the narrative consistent when the profile evolves later.</p></div>
+        <div class="story-matrix"><div><span>Profile</span><strong>REV 042</strong></div><div><span>Role view</span><strong>BACKEND</strong></div><div><span>Resume</span><strong>R-019</strong></div><div><span>Status</span><strong class="success-text">INTERVIEW</strong></div></div>
+      </div>
+    </section>
+
+    <section id="engineering" class="section content-section">
+      <div class="section-heading reveal">
+        <div class="eyebrow">05 · Recruiter view</div>
+        <h2>What I wanted to demonstrate as an engineer.</h2>
+      </div>
+      <div class="engineering-grid reveal delay-1">
+        <article class="engineering-card"><div class="card-index">A</div><h3>Systems thinking</h3><p>Separate the canonical state from consumers, adapters and workflows. Let the core protect integrity while intelligence stays at the edges.</p><div class="mono-note">domain → service → adapters</div></article>
+        <article class="engineering-card"><div class="card-index">B</div><h3>AI as an interface</h3><p>Expose the profile through MCP so AI clients can retrieve purpose-built context and make structured, auditable changes.</p><div class="mono-note">tool → validate → revise → consume</div></article>
+        <article class="engineering-card"><div class="card-index">C</div><h3>Versioned state</h3><p>Every meaningful change creates a revision. Consumers can ask what changed, and historical artifacts can stay tied to the state they were built from.</p><div class="mono-note">rev_n → diff → rev_n+1</div></article>
+        <article class="engineering-card"><div class="card-index">D</div><h3>Graceful automation</h3><p>Automate repetitive reasoning-heavy work, but keep consequential actions visible and reviewable rather than pretending autonomy is always the goal.</p><div class="mono-note">AI heavy · human gated</div></article>
+      </div>
+    </section>
+
+    <section class="section content-section compact-section">
+      <div class="two-col reveal">
+        <div>
+          <div class="eyebrow">06 · Architecture that evolves</div>
+          <h2>The website is designed to grow with the system.</h2>
+          <p>New engines, consumers, profile views and event flows can be added without changing the public narrative: the Profile Core remains the center, while the architecture map simply gains another branch.</p>
+        </div>
+        <div class="evolution-card">
+          <div class="evolution-row"><span>Now</span><div class="evo-line"><i class="filled"></i><i class="filled"></i><i class="filled"></i><i></i></div><strong>Core + engines</strong></div>
+          <div class="evolution-row"><span>Next</span><div class="evo-line"><i class="filled"></i><i class="filled"></i><i class="filled"></i><i class="filled"></i></div><strong>Webhooks + richer graph</strong></div>
+          <div class="evolution-row"><span>Later</span><div class="evo-line long"><i class="filled"></i><i class="filled"></i><i class="filled"></i><i class="filled"></i><i class="filled"></i></div><strong>More AI consumers</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section final-cta">
+      <div class="final-card reveal">
+        <div><div class="eyebrow">Flagship project</div><h2>Rishav's Career OS</h2><p>A personal AI career platform built as infrastructure, not a collection of scripts.</p></div>
+        <div class="final-actions"><a class="button button-primary" href="#demo">Explore the system <span>→</span></a><a class="button button-ghost" href="https://github.com/Rishavzone10" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>Rishav's Career OS · Public technical showcase</div>
+    <div class="footer-links"><a href="https://github.com/Rishavzone10" target="_blank" rel="noreferrer">GitHub</a><a href="https://rishav-portfolio-phi.vercel.app/page#hero" target="_blank" rel="noreferrer">Portfolio</a><a href="#top">Back to top ↑</a></div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
